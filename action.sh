@@ -1,10 +1,21 @@
 #!/bin/sh
 # action.sh
 
+# functions
 dump_printenv() {
 	echo "[%] dumping printenv"
 	printenv > /data/adb/modules/detect_environ/action.txt
 }
+
+# account multiple root
+manager_daemon_count=0
+[ -f /data/adb/ap/bin/apd ] && manager_daemon_count=$((manager_daemon_count + 1))
+[ -f /data/adb/ksu/bin/ksud ] && manager_daemon_count=$((manager_daemon_count + 1))
+[ -f /data/adb/magisk/magisk ] && manager_daemon_count=$((manager_daemon_count + 1))
+
+if [ $manager_daemon_count -gt 1 ]; then
+	echo "[!] multiple root?"
+fi
 
 # echo mmrl 
 if [ -n "$MMRL" ]; then
