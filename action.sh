@@ -33,6 +33,7 @@ fi
 if [ "$KSU" = "true" ]; then
 	echo "[+] root is KernelSU"
 	echo "[+] $KSU_KERNEL_VER_CODE / $KSU_VER_CODE"
+	[ "$KSU_MAGIC_MOUNT" = "true" ] && echo "[+] running in magic_mount mode" 
 	dump_printenv
 	sleep 10
 fi
