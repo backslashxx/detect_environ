@@ -27,7 +27,7 @@ if [ "$APATCH" = "true" ]; then
 	echo "[+] $APATCH_VER / $APATCH_VER_CODE"
 	[ "$APATCH_BIND_MOUNT" = "true" ] && echo "[+] running in bind_mount mode" 
 	dump_printenv
-	sleep 10
+	[ -z "$MMRL" ] && sleep 10
 fi
 
 if [ "$KSU" = "true" ]; then
@@ -35,7 +35,7 @@ if [ "$KSU" = "true" ]; then
 	echo "[+] $KSU_KERNEL_VER_CODE / $KSU_VER_CODE"
 	[ "$KSU_MAGIC_MOUNT" = "true" ] && echo "[+] running in magic_mount mode" 
 	dump_printenv
-	sleep 10
+	[ -z "$MMRL" ] && sleep 10
 fi
 
 if [ -n "$MAGISKTMP" ]; then
