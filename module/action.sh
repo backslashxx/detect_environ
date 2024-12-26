@@ -4,7 +4,7 @@
 # functions
 dump_printenv() {
 	echo "[%] dumping printenv"
-	printenv > /data/adb/modules/detect_environ/action.txt
+	printenv | tee /data/adb/modules/detect_environ/action.txt
 }
 
 # account multiple root
