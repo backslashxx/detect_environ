@@ -1,0 +1,43 @@
+body {
+    padding-top: var(--window-inset-top);
+    padding-bottom: var(--window-inset-bottom);
+}
+
+.output {
+    font-family: monospace;
+    font-size: 14px;
+    left: 10px;
+    white-space: nowarp;
+    word-break: break-all;
+}
+
+.output p {
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    max-width: calc(100vw - 20px);
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation ease-out;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #121212;
+		color: #fff;
+	}
+}
