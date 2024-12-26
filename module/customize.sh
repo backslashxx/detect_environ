@@ -15,5 +15,5 @@ echo $MODDIR
 if { [ "$KSU" = "true" ] && [ "$KSU_VER_CODE" -lt 11981 ]; } || 
 	{ [ "$APATCH" = "true" ] && [ "$APATCH_VER_CODE" -lt 10927 ]; }; then
 	echo "old manager - no action.sh support"
-	rm $MODPATH/action.sh
+	# rm $MODPATH/action.sh
 fi
