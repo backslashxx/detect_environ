@@ -1,16 +1,6 @@
 #!/bin/sh
 # action.sh
 
-# mmrl's custom feature
-# https://github.com/DerGoogler/MMRL/blob/master/docs/INSTALLER.md#clear-terminal
-if [ "$MMRL" = "true" ]; then
-        if echo "$CLASSPATH" | grep -q "mmrl.debug" > /dev/null 2>&1; then
-                clear() { am broadcast -a com.dergoogler.mmrl.debug.CLEAR_TERMINAL > /dev/null 2>&1; }
-        else
-                clear() { am broadcast -a com.dergoogler.mmrl.CLEAR_TERMINAL > /dev/null 2>&1; }
-        fi
-fi
-
 # loading scren demos
 # https://github.com/tiann/KernelSU/pull/2307 
 # now live on ksu and ksu-next
