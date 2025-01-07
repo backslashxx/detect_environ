@@ -3,9 +3,10 @@
 
 # loading scren demos
 # https://github.com/tiann/KernelSU/pull/2307 
-# now live on ksu and ksu-next
-if [ "$MMRL" = "true" ] || { [ "$KSU" = "true" ] && [ "$KSU_VER_CODE" -ge 11998 ]; } \
-        || { [ "$KSU_NEXT" = "true" ] && [ "$KSU_VER_CODE" -ge 12144 ]; }; then
+# mmrl and ksu 11998, ksu-next 12144, apatch 11022 and above can clear action window
+if [ "$MMRL" = "true" ] || { [ "$KSU" = "true" ] && [ "$KSU_VER_CODE" -ge 11998 ]; } || 
+	{ [ "$KSU_NEXT" = "true" ] && [ "$KSU_VER_CODE" -ge 12144 ]; } ||
+	{ [ "$APATCH" = "true" ] && [ "$APATCH_VER_CODE" -ge 11022 ]; }; then
         loops=20
         while [ $loops -gt 1 ];  do 
 		for i in '[-]' '[/]' '[|]' '[\]'; do 
