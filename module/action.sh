@@ -40,6 +40,7 @@ fi
 # echo mmrl 
 if [ -n "$MMRL" ]; then
         echo "[+] running inside MMRL"
+        [ ! -z "$MMRL_VER_CODE" ] && echo "[+] $MMRL_VER / $MMRL_VER_CODE "
 fi
 
 if [ "$APATCH" = "true" ]; then
