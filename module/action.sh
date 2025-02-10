@@ -64,6 +64,7 @@ echo "[%] dumping printenv"
 printenv | tee /data/adb/modules/detect_environ/action.txt
 
 # APatch and KernelSU needs this
-if [ -z "$MMRL" ] && { [ "$KSU" = "true" ] || [ "$APATCH" = "true" ]; }; then
+# ksu next, mmrl and magisk does not.
+if [ -z "$MMRL" ] && [ -z "$KSU_NEXT" ] && { [ "$KSU" = "true" ] || [ "$APATCH" = "true" ]; }; then
 	sleep 5
 fi
