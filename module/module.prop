@@ -1,6 +1,6 @@
 id=detect_environ
 name=detect_environ
-version=v1
-versionCode=100
-author=xx
+version=v1.0.1
+versionCode=101
+author=xx, KOWX712
 description=detect_environ
