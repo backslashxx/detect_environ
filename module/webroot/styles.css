@@ -37,17 +37,14 @@ body {
 .output {
     font-family: monospace;
     font-size: 14px;
-    left: 10px;
     white-space: nowarp;
     word-break: break-all;
 }
 
 .output p {
+    background-color: var(--bg-primary);
     border-radius: 5px;
-    position: relative;
-    overflow: hidden;
     width: fit-content;
-    word-break: break-all;
     max-width: calc(100vw - 20px);
 }
 
